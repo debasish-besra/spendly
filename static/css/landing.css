@@ -1,0 +1,220 @@
+/* ------------------------------------------------------------------ */
+/* Landing page — hero overrides                                       */
+/* Loaded after style.css; all rules here take cascade precedence.    */
+/* ------------------------------------------------------------------ */
+
+/* ------------------------------------------------------------------ */
+/* Hero layout                                                         */
+/* ------------------------------------------------------------------ */
+
+.hero {
+    display: block;                 /* override style.css grid */
+    padding: 4.5rem 2rem 5rem;
+    background: var(--paper-card);
+    text-align: center;
+}
+
+.hero-inner {
+    max-width: 720px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ------------------------------------------------------------------ */
+/* Badge                                                               */
+/* ------------------------------------------------------------------ */
+
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    background: var(--accent-light);
+    color: var(--accent);
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0;
+    text-transform: none;
+    padding: 0.4rem 1rem;
+    border-radius: 999px;
+    border: 1px solid rgba(26, 71, 42, 0.18);
+    margin-bottom: 2rem;
+}
+
+.hero-badge-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--accent);
+    flex-shrink: 0;
+}
+
+/* ------------------------------------------------------------------ */
+/* Title                                                               */
+/* ------------------------------------------------------------------ */
+
+.hero-title {
+    font-family: var(--font-display);
+    font-size: clamp(2.6rem, 6vw, 4.2rem);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    margin-bottom: 1.5rem;
+}
+
+.hero-title-accent {
+    display: block;
+    color: var(--accent);
+}
+
+/* ------------------------------------------------------------------ */
+/* Subtitle                                                            */
+/* ------------------------------------------------------------------ */
+
+.hero-subtitle {
+    font-size: 1.05rem;
+    color: var(--ink-muted);
+    line-height: 1.75;
+    max-width: 520px;
+    margin-bottom: 2.5rem;
+}
+
+/* ------------------------------------------------------------------ */
+/* Buttons                                                             */
+/* ------------------------------------------------------------------ */
+
+.hero-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 3.5rem;
+}
+
+/* ------------------------------------------------------------------ */
+/* Dashboard mockup                                                    */
+/* ------------------------------------------------------------------ */
+
+.hero-dashboard {
+    width: 100%;
+    background: #ededea;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 1.25rem 1.25rem 1.25rem;
+    box-shadow: 0 6px 32px rgba(0, 0, 0, 0.07);
+    text-align: left;
+}
+
+/* macOS traffic-light chrome */
+.dashboard-chrome {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 1.25rem;
+}
+
+.chrome-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.chrome-red    { background: #ff5f57; }
+.chrome-yellow { background: #febc2e; }
+.chrome-green  { background: #28c840; }
+
+/* ------------------------------------------------------------------ */
+/* Stat cards                                                          */
+/* ------------------------------------------------------------------ */
+
+.dashboard-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.stat-card {
+    background: var(--paper-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 1rem 1.1rem;
+}
+
+.stat-label {
+    font-size: 0.8rem;
+    color: var(--ink-muted);
+    margin-bottom: 0.3rem;
+}
+
+.stat-value {
+    font-size: 1.55rem;
+    font-weight: 600;
+    color: var(--ink);
+    letter-spacing: -0.02em;
+    margin-bottom: 0.25rem;
+    line-height: 1.2;
+}
+
+.stat-meta {
+    font-size: 0.8rem;
+    color: var(--ink-muted);
+    font-weight: 500;
+}
+
+.stat-danger  { color: var(--danger); }
+.stat-success { color: var(--accent); }
+
+/* ------------------------------------------------------------------ */
+/* Category progress bars                                              */
+/* ------------------------------------------------------------------ */
+
+.dashboard-bars {
+    background: var(--paper-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 1rem 1.1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+}
+
+.dash-row {
+    display: grid;
+    grid-template-columns: 52px 1fr;
+    align-items: center;
+    gap: 1rem;
+}
+
+.dash-cat {
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+    font-weight: 500;
+    text-align: right;
+}
+
+.dash-track {
+    height: 8px;
+    background: var(--border-soft);
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.dash-bar {
+    height: 100%;
+    border-radius: 999px;
+}
+
+.dash-amber  { background: #d4860a; }
+.dash-blue   { background: #3b82f6; }
+.dash-purple { background: #7c6cf0; }
+
+/* ------------------------------------------------------------------ */
+/* Responsive                                                          */
+/* ------------------------------------------------------------------ */
+
+@media (max-width: 640px) {
+    .dashboard-stats {
+        grid-template-columns: 1fr;
+    }
+}
